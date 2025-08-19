@@ -26,7 +26,7 @@ if ingredient_lists:
 
     for each_fruit in ingredient_lists:
         ingredients_string+=each_fruit+' '
-        st.sub_header(each_fruit + 'Nutrient Information')
+        st.subheader(each_fruit + 'Nutrient Information')
         smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
         sf_df=st.dataframe(data=smoothiefroot_response.json(),use_container_width=True)
         
